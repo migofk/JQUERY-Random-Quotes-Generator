@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Quotes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="style.css" type="text/css">
+ </head>
+ <body>
+<!--container for the app-->     
+   <div class="container">
+
+<!--creating quotes (display: none) -->
+<div class="quote">“Be yourself; everyone else is already taken.”
+― Oscar Wilde</div>
+<div class="quote">“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”
+― Albert Einstein</div>
+<div class="quote">“Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.”
+― Bernard M. Baruch</div>
+<div class="quote">“So many books, so little time.”
+― Frank Zappa</div>
+<div class="quote">“You've gotta dance like there's nobody watching,
+Love like you'll never be hurt,
+Sing like there's nobody listening,
+And live like it's heaven on earth.”
+― William W. Purkey</div>
+<div class="quote">“A room without books is like a body without a soul.”
+― Marcus Tullius Cicero</div>
+<div class="quote">“You know you're in love when you can't fall asleep because reality is finally better than your dreams.”
+― Dr. Seuss</div>
+<div class="quote">“You only live once, but if you do it right, once is enough.”
+― Mae West</div>
+<div class="quote">“Be the change that you wish to see in the world.”
+― Mahatma Gandhi</div>
+<div class="quote">“In three words I can sum up everything I've learned about life: it goes on.”
+― Robert Frost</div>
+<div class="quote">“If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals.”
+― J.K. Rowling, Harry Potter and the Goblet of Fire</div>
+<div class="quote">“It is better to be hated for what you are than to be loved for what you are not.”
+― André Gide, Autumn Leaves</div>
+<div class="quote">“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”
+― Marilyn Monroe</div>
+<div class="quote">“It is our choices, Harry, that show what we truly are, far more than our abilities.”
+― J.K. Rowling, Harry Potter and the Chamber of Secrets</div>
+<div class="quote">“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”
+― Albert Einstein</div>
+<div class="quote">“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”
+― Jane Austen, Northanger Abbey</div>
+<div class="quote">“It does not do to dwell on dreams and forget to live.”
+― J.K. Rowling, Harry Potter and the Sorcerer's Stone</div>
+<div class="quote">“It is better to remain silent at the risk of being thought a fool, than to talk and remove all doubt of it.”
+― Maurice Switzer</div>
+<div class="quote">“Good friends, good books, and a sleepy conscience: this is the ideal life.”
+― Mark Twain</div>
+<div class="quote">“Life is what happens to us while we are making other plans.”
+― Allen Saunders</div>
+<div class="quote">“The fool doth think he is wise, but the wise man knows himself to be a fool.”
+― William Shakespeare, As You Like It</div>
+<div class="quote">“Whenever you find yourself on the side of the majority, it is time to reform (or pause and reflect).”
+― Mark Twain</div>
+<div class="quote" id="test">“Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.”
+― Bil Keane</div>
+
+<!--creating a button for generating a quote -->
+<button id="btn" class="btn btn-success btn">Generate</button>
+</div>
+
+
+<script>
+$(document).ready(function() {
+
+//array for the quotes.
+var quotes = $('.quote');
+
+//automatically chose a randam chosing the first quotes on loading.
+var arr = quotes.length;
+var random = Math.floor(Math.random() * arr);
+$(quotes[random]).fadeIn('slow');
+
+
+//chosing a randam chosing the first quotes on click a button.
+$("#btn").click(function() {
+$(quotes).hide();
+var random = Math.floor(Math.random() * arr);
+$(quotes[random]).fadeIn('slow');
+});
+
+
+});
+
+
+</script>
+
+
+
+  </body>
+ </html>
